@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useFetch } from './hooks/useFetch';
+import { Route, Routes } from 'react-router-dom';
+import { Character } from './components/Character';
+import { Home } from './components/Home';
 
 function App() {
+  const { REACT_APP_API_CALL } = process.env;
+  const { data, isLoading } = useFetch(REACT_APP_API_CALL);
+  if (!isLoading) {
+    const { results } = data;
+    console.log(results);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="characters" element={<Character />} />
+      </Routes>
     </div>
   );
 }

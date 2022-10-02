@@ -6,6 +6,7 @@ export const useFetch = (url) => {
     data: null,
     isLoading: true,
     hasError: null,
+    page: 0,
   });
 
   useEffect(() => {

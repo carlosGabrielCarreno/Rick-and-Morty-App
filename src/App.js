@@ -1,20 +1,13 @@
-import { useFetch } from './hooks/useFetch';
 import { Route, Routes } from 'react-router-dom';
-import { Character } from './components/Character';
-import { Home } from './components/Home';
+import { Home } from './views/Home';
+import { Characters } from './components/Characters';
 
 function App() {
-  const { REACT_APP_API_CALL } = process.env;
-  const { data, isLoading } = useFetch(REACT_APP_API_CALL);
-  if (!isLoading) {
-    const { results } = data;
-    console.log(results);
-  }
   return (
-    <div className="app">
+    <div className="bg-neutral-300 w-full h-full">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="characters" element={<Character />} />
+        <Route index path="characters" element={<Characters />} />
       </Routes>
     </div>
   );

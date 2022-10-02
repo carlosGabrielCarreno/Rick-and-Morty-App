@@ -1,4 +1,4 @@
-### <a href="https://rick-and-morty-app-using-tailwind-css.netlify.app/characters">url</a>
+### <a href="https://rick-and-morty-app-using-tailwind-css.netlify.app">url</a>
 
 In the project directory, you can run:
 

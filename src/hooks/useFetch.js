@@ -10,7 +10,7 @@ export const useFetch = (url) => {
   });
 
   useEffect(() => {
-    console.log('useEffect');
+    /* console.log('useEffect'); */
     getFetch({ url, state, setState });
   }, [url]);
 

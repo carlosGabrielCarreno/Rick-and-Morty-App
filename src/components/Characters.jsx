@@ -5,7 +5,7 @@ import { SetButton } from '../views/SetButton';
 
 export const Characters = () => {
   const { counter, decrement, increment } = useCounter();
-  const { REACT_APP_API_CALL } = process.env;
+  const REACT_APP_API_CALL = 'https://rickandmortyapi.com/api/character';
   const { data, isLoading } = useFetch(REACT_APP_API_CALL + '?page=' + counter);
 
   const handleNextPage = (e) => {

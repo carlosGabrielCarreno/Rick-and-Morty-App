@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 export const Home = (props) => {
   const navigate = useNavigate();

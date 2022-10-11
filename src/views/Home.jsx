@@ -9,9 +9,13 @@ export const Home = (props) => {
     navigate('/characters');
   };
   return (
-    <div>
-      <h1>Soy Home</h1>
-      <button onClick={handleGoStart}>Ir a Characters</button>
+    <div className="h-screen flex items-center justify-center">
+      <button
+        className="bg-cyan-500 hover:bg-cyan-600 p-1 animate__animated animate__rubberBand"
+        onClick={handleGoStart}
+      >
+        Get started
+      </button>
     </div>
   );
 };

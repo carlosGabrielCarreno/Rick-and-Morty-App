@@ -8,6 +8,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route index path="characters" element={<Characters />} />
+        <Route index path="/*" element={<Home />} />
       </Routes>
     </div>
   );
